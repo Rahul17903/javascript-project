@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+<body class="flex justify-center items-center h-[100vh] bg-slate-800">
+    <div class="container bg-white rounded-md w-[400px] space-y-4 p-[20px]">
+        <div class="flex flex-row justify-center gap-5">
+            <h2 class="font-bold text-blue-900 text-[1.5rem]">To-Do List</h2>
+            <img src="./images/icon.png" alt="" class="h-10">
+        </div>
+        <div class="flex items-center space-x-2 p-4 bg-white rounded-lg ">
+            <input id="taskInput" type="text" class="flex-grow rounded-full border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 " placeholder="Add your task">
+            <div id="addTask" class="bg-red-500 text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 cursor-pointer" >ADD</div>
+        </div>
+        <ul id="taskList" class="p-3 text-[1.3rem] space-y-2">
+            <!-- Task items will go here -->
+          </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
