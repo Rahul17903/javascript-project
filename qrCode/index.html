@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="flex justify-center items-center h-[100vh]">
+    <div class="container bg-slate-600 h-[400px] w-[350px]">
+        <input type="text" id="input" placeholder="enter your url or name">
+        <div id="img">
+            
+        </div>
+        <button id="btn">click me</button>
+    </div>
+    <script>
+        let input = document.getElementById("input")
+        let img = document.getElementById("img")
+        let btn = document.getElementById("btn")
+        let image = document.createElement("img")
+        btn.addEventListener("click",()=>{
+            image.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${input}`
+            img.appendChild(image)
+        })
+
+    </script>
+</body>
+</html>
