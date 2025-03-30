@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    color: rgba(255, 255, 255, 0.801);
+    background: #051923;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+    background: #051923;
+    position: relative;
+}
+
+
+.left-side {
+    height: calc(100% - 50px);
+    width: calc(100% / 2 - 50px);
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.right-side {
+    height: calc(100% - 50px);
+    width: calc(100% / 2 - 50px);
+    padding: 5px;
+
+}
+
+
+
+.box {
+    background: #00000050;
+    border: 2px solid rgba(255, 255, 255, 0.177);
+    border-radius: 10px 10px 0 0 ;
+    overflow: hidden;
+
+    position: relative;
+    transition: all .3s ease;
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+.box:hover {
+    border-color: rgba(255, 255, 255, 0.442);
+}
+
+.right-side .box {
+    background: white;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 720px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .left-side, .right-side{
+        width: 90%;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+.header {
+    height: 40px;
+    padding: 0 10px 0 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #050c12;
+    position: sticky;
+    top: 0;
+}
+
+h2{
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h2 span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.fa-html5 {
+    color: #ff5d5b;
+}
+
+.fa-css3-alt{
+    color: #10a9d7;
+}
+
+.fa-square-js{
+    color: #ffbb39;
+}
+
+.fa-play{
+    color: lightseagreen;
+}
+
+.mmc {
+    display: flex;
+    gap: 10px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.red {
+    background: #ff5d5b;
+}
+
+.yellow {
+    background: #ffbb39;
+}
+
+.green {
+    background: #00cd4e;
+}
+
+textarea{
+    width: 100%;
+    height: calc(100% - 40px);
+    background: #0000002a;
+
+    overflow: auto;
+    resize: none;
+    padding: 5px 10px;
+    color: white;
+
+    border: none !important;
+    outline: none !important;
+}
+
+
+.right-side iframe{
+    height: calc(100% - 40px);
+    width: 100%;
+    border: none;
+}
+
+.CodeMirror {
+    font-family: monospace;
+    font-size: 16px; /* Adjust size as needed */
+    line-height: 1.5; /* Improves readability */
+}
+
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgba(116, 144, 255, 0.57);
+    border-radius: 10px;
+}
+
+
+
+/* Default Monospace Font */
+.CodeMirror {
+    font-family: "Fira Code", "Courier New", monospace;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Light Mode */
+body .light-mode {
+    background: #fff;
+    color: #333;
+}
+
+/* Dark Mode */
+body .dark-mode {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+/* Theme Buttons */
+.theme-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.download-btn {
+    background: #28a745;
+    color: white;
+}
+
+.fullscreen-btn {
+    background: #007bff;
+    color: white;
+}
+
+.theme-toggle {
+    background: #ffc107;
+    color: black;
+}
+
+.theme-select {
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="theme-buttons">
+            <button class="theme-toggle">Toggle Dark/Light</button>
+            <select class="theme-select">
+                <option value="dracula">Dracula</option>
+                <option value="monokai">Monokai</option>
+                <option value="material">Material</option>
+            </select>
+            <button class="download-btn">Download Code</button>
+            <button class="fullscreen-btn">Fullscreen Mode</button>
+        </div>
+        
+        <div class="left-side">
+            <!-- HTML Editor -->
+            <div class="html box">
+                <div class="header">
+                    <h2>
+                        <i class="fa-brands fa-html5"></i>
+                        <span>HTML</span>
+                    </h2>
+                </div>
+                <textarea id="code-editor-html"></textarea>
+            </div>
+
+            <!-- CSS Editor -->
+            <div class="css box">
+                <div class="header">
+                    <h2>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </h2>
+                </div>
+                <textarea id="code-editor-css"></textarea>
+            </div>
+
+            <!-- JavaScript Editor -->
+            <div class="javascript box">
+                <div class="header">
+                    <h2>
+                        <i class="fa-brands fa-square-js"></i>
+                        <span>Javascript</span>
+                    </h2>
+                </div>
+                <textarea id="code-editor-javascript"></textarea>
+            </div>
+        </div>
+
+        <!-- Output Section -->
+        <div class="right-side">
+            <div class="output box">
+                <div class="header">
+                    <h2>
+                        <i class="fa-solid fa-play"></i>
+                        <span>Output</span>
+                    </h2>
+                </div>
+                <iframe id="output"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    
+    <!-- Add-ons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closetag.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
